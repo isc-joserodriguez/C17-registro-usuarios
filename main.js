@@ -1,19 +1,17 @@
+import {
+  loginBtn,
+  loginEmailInput,
+  loginPasswordInput,
+  registroBtn,
+  registroEmailInput,
+  registroFirstNameInput,
+  registroLastNameInput,
+  registroPasswordConfirmInput,
+  registroPasswordInput,
+} from './js/DOMObjects';
+
 /* const userInfo = document.getElementById('userInfo');
 const lista = document.getElementById('lista'); */
-//! Login
-const loginEmailInput = document.getElementById('loginEmail');
-const loginPasswordInput = document.getElementById('loginPassword');
-const loginBtn = document.getElementById('loginBtn');
-
-//! Registro
-const registroFirstNameInput = document.getElementById('registroFirstName');
-const registroLastNameInput = document.getElementById('registroLastName');
-const registroEmailInput = document.getElementById('registroEmail');
-const registroPasswordInput = document.getElementById('registroPassword');
-const registroPasswordConfirmInput = document.getElementById(
-  'registroPasswordConfirm'
-);
-const registroBtn = document.getElementById('registroBtn');
 
 const getRegistroFormValues = () => {
   /* 
