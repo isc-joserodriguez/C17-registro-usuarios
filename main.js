@@ -5,4 +5,4 @@ registroBtn.addEventListener('click', registrarUsuario);
 
 loginBtn.addEventListener('click', iniciarSesion);
 
-console.log('hola');
+console.log('hola adiós');
