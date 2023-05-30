@@ -66,11 +66,11 @@ export const deleteUser = async (id) => {
   console.log(data);
 };
 
-export const addUser = async (data) => {
+export const addUser = async (datos) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.post(
     `https://simple-server-ochre.vercel.app/users`,
-    data,
+    datos,
     {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token'),
