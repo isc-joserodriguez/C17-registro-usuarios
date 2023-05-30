@@ -39,11 +39,11 @@ export const getUser = async (id) => {
   console.log(data);
 };
 
-export const editUser = async (id, data) => {
+export const editUser = async (id, datos) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.put(
     `https://simple-server-ochre.vercel.app/users/${id}`,
-    data, // JSON que recibe email, firstName, lastName
+    datos, // JSON que recibe email, firstName, lastName
     {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token'),
