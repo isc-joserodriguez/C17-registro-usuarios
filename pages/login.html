@@ -11,12 +11,12 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="../index.html">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,22 +31,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="./pages/login.html">Iniciar sesion</a>
+              <a class="nav-link active" href="./login.html">Iniciar sesion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./pages/register.html">Registro</a>
+              <a class="nav-link active" href="./register.html">Registro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./pages/usuarios.html">Usuarios</a>
+              <a class="nav-link active" href="./usuarios.html">Usuarios</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <h1>Bienvenido</h1>
-      <button onclick="localStorage.clear()">cerrar sesión</button>
+        <h1>Login</h1>
+        <form>
+          <label>Email</label>
+          <input type="email" id="loginEmail" />
+          <br />
+          <label>Password</label>
+          <input type="password" id="loginPassword" />
+          <br />
+          <button type="button" id="loginBtn">Iniciar sesión</button>
+        </form>
     </main>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -58,5 +67,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/login.js" type="module"></script>
   </body>
 </html>

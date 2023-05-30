@@ -1,4 +1,8 @@
-import { getLoginFormValues, getRegistroFormValues } from '../utils.js';
+import {
+  getLoginFormValues,
+  getRegistroFormValues,
+  redirectOnLogin,
+} from '../utils.js';
 
 export const registrarUsuario = async () => {
   const objetoAEnviar = getRegistroFormValues();
@@ -30,7 +34,9 @@ export const iniciarSesion = async () => {
     objetoAEnviar
   );
 
-  console.log(data);
+  localStorage.setItem('token', data.token);
+
+  redirectOnLogin();
 };
 
 export const getMyInfo = async () => {

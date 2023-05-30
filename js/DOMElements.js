@@ -15,3 +15,6 @@ export const registroPasswordConfirmInput = document.getElementById(
   'registroPasswordConfirm'
 );
 export const registroBtn = document.getElementById('registroBtn');
+
+//! Usuarios
+export const tablaUsuarios = document.getElementById('tablaUsuarios');

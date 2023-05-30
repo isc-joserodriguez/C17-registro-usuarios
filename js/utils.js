@@ -43,3 +43,11 @@ export const getLoginFormValues = () => {
     password: valorPass,
   };
 };
+
+export const redirectOnLogin = () => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    alert('Ya iniciaste sesión');
+    window.location.replace('./usuarios.html');
+  }
+};
