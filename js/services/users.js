@@ -29,7 +29,7 @@ export const getAllUsers = async () => {
 export const getUser = async (id) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.get(
-    `https://simple-server-ochre.vercel.app/users/${id}`,
+    `https://simple-server-ochre.vercel.app/user/${id}`,
     {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token'),
@@ -42,7 +42,7 @@ export const getUser = async (id) => {
 export const editUser = async (id, datos) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.put(
-    `https://simple-server-ochre.vercel.app/users/${id}`,
+    `https://simple-server-ochre.vercel.app/user/${id}`,
     datos, // JSON que recibe email, firstName, lastName
     {
       headers: {
@@ -56,7 +56,7 @@ export const editUser = async (id, datos) => {
 export const deleteUser = async (id) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.delete(
-    `https://simple-server-ochre.vercel.app/users/${id}`,
+    `https://simple-server-ochre.vercel.app/user/${id}`,
     {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem('token'),
@@ -69,7 +69,7 @@ export const deleteUser = async (id) => {
 export const addUser = async (datos) => {
   //! Petición que me obtiene a un usuario
   const { data } = await axios.post(
-    `https://simple-server-ochre.vercel.app/users`,
+    `https://simple-server-ochre.vercel.app/user`,
     datos,
     {
       headers: {
