@@ -1,5 +1,6 @@
 import { tablaUsuarios } from '../DOMElements.js';
 export const getAllUsers = async () => {
+  tablaUsuarios.innerHTML = '';
   //! Petición que me obtenga los usuarios
   const { data } = await axios.get(
     'https://simple-server-ochre.vercel.app/users',
@@ -17,13 +18,15 @@ export const getAllUsers = async () => {
             <td>${user.lastName}</td>
             <td>${user.email}</td>
             <td>
-            <button class="btn btn-primary">Mostrar</button>
-            <button class="btn btn-warning">Edit</button>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-primary" id="mostrar-${user._id}">Mostrar</button>
+            <button class="btn btn-warning" id="editar-${user._id}">Edit</button>
+            <button class="btn btn-danger" id="eliminar-${user._id}">Delete</button>
             </td>
           </tr>
     `;
   });
+
+  return data.data;
 };
 
 export const getUser = async (id) => {
@@ -63,7 +66,6 @@ export const deleteUser = async (id) => {
       },
     }
   );
-  console.log(data);
 };
 
 export const addUser = async (datos) => {
